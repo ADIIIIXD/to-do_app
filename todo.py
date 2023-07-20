@@ -1,6 +1,5 @@
 import functions
 
-
 while True:
     user_action = input("Type add, show, edit, completed, or exit : ")
     user_action = user_action.strip()
@@ -37,9 +36,7 @@ while True:
     elif user_action.startswith("completed"):
         try:
             todos = functions.get_todo()
-            print(todos)
             num = int(user_action[9:])
-            todos = functions.get_todo()
             index = num - 1
             todo_to_remove = todos[index].strip("\n")
             todos.pop(index)
